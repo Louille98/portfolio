@@ -19,5 +19,5 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App name="Louis" />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()
