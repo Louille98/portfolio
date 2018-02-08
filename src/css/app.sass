@@ -1,0 +1,218 @@
+$light_grey: #D3D3D3
+$dark_grey: #4A4A4A
+
+body
+    margin: 0
+    font-size: 16px
+    font:
+        size: 16px
+        style: normal
+        weight: 400
+        family: 'Montserrat', Helvetica, Arial, sans-serif
+    color: $dark_grey
+
+strong
+    font-weight: 500
+
+img
+    max-width: 100%
+    transition: transform .2s ease-in-out
+    &:hover
+        transform: scale(1.05)
+
+.container
+    width: 1140px
+    max-width: 100%
+    margin: 0 auto
+
+.header
+    position: relative
+    padding-top: 60px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .logo
+        margin: 20px 0
+        font-weight: 600
+        display: block
+    &--image
+        background: url('../img/header_img.jpg') center center/cover no-repeat
+        height: 330px
+    &--text
+        position: absolute
+        bottom: 30px
+        font-size: 3em
+        margin: 0
+    &__nav
+        ul
+            padding: 0
+            margin: 0
+            text-align: right
+            li
+                display: inline-block
+                padding: 20px
+                a
+                    position: relative
+                    z-index: 99
+                    padding: 0 4px
+                    &::after
+                        content: " "
+                        display: block
+                        position: absolute
+                        width: 100%
+                        bottom: 0
+                        z-index: -9
+                        height: 10px
+                        background-color: white
+                        transition: height .4s ease-in-out
+                    &:hover
+                        &::after
+                            height: 100%
+    a
+        text-decoration: none
+        color: $dark_grey
+        font-size: 20px / 16px * 1em
+
+[class*="col-"]
+    display: inline-block
+    box-sizing: border-box
+    padding: 0 10px
+
+.col-2
+    width: 100 / 12 * 2 * 1%
+.col-3
+    width: 100 / 12 * 3 * 1%
+.col-4
+    width: 100 / 12 * 4 * 1%
+.col-5
+    width: 100 / 12 * 5 * 1%
+.col-6
+    width: 100 / 12 * 6 * 1%
+.col-7
+    width: 100 / 12 * 7 * 1%
+.col-8
+    width: 100 / 12 * 8 * 1%
+.col-9
+    width: 100 / 12 * 9 * 1%
+.col-10
+    width: 100 / 12 * 10 * 1%
+.col-11
+    width: 100 / 12 * 11 * 100%
+.col-12
+    width: 100%
+
+.works
+    margin-top: 120px
+    &__title
+        text-transform: uppercase
+        font-weight: 500
+        color: $light_grey
+        letter-spacing: 2px
+        font-size: 12px / 16px * 1em
+        margin-left: 100 / 12 * 2 * 1%
+    .col-10.illustration
+        margin-left: -100 / 12 * 2 * 1%
+        padding: 65px 200px
+    &__item
+        display: flex
+        flex-direction: row
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+        font-size: 20px / 16px * 1em
+        margin-bottom: 120px
+
+        h3
+            color: black
+            font-weight: 500
+        p
+            line-height: 1.5
+        a
+            color: black
+            text-decoration: none
+            position: relative
+            z-index: 9
+            padding: 0 6px
+            &::after
+                content: " "
+                display: block
+                width: 100%
+                position: absolute
+                background-color: var(--illustration-color)
+                bottom: 0
+                height: 10px
+                z-index: -9
+                transition: height .4s ease-in-out
+            &:hover::after
+                height: 100%
+        .col-3
+            z-index: 9999
+
+
+.fa-heart
+    transition: animation .4s ease-in-out
+    &:hover
+        animation: heartbeat .8s infinite
+
+footer
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    margin-bottom: 70px
+    margin-top: 50px
+    .col-3
+        z-index: 9999
+        position: relative
+    h4
+        font-size: 70px
+        font-weight: 500
+        margin: 10px
+    .col-6
+        margin-left: 50%
+    .col-10
+        margin-left: -100 / 12 * 1 * 1%
+        background-color: #E4E4E4
+        ul
+            list-style: none
+            padding: 10px 0
+            margin: 0
+            height: 92px
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            li
+                margin: 5px 0
+                a
+                    text-decoration: none
+                    color: $dark_grey
+                    font-weight: 500
+                    position: relative
+                    z-index: 999
+                    padding: 0 4px
+                    &::after
+                        content: " "
+                        display: block
+                        width: 100%
+                        height: 10px
+                        background-color: white
+                        position: absolute
+                        bottom: 0
+                        z-index: -9
+                        transition: height .4s ease-in-out
+                    &:hover
+                        &::after
+                            height: 100%
+
+
+
+
+@keyframes heartbeat
+    0%
+        transform: scale(1)
+        color: #FF6059
+    50%
+        transform: scale(1.1)
+        color: darken(#FF6059, 20%)
+    100%
+        transform: scale(1)
+        color: #FF6059
